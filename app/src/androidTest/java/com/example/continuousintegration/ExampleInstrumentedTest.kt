@@ -21,4 +21,11 @@ class ExampleInstrumentedTest {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.example.continuousintegration", appContext.packageName)
     }
+
+    @Test
+    fun useAppContext_2() {
+        // Context of the app under test.
+        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+        assertEquals("com.example.wrong", appContext.packageName)
+    }
 }
