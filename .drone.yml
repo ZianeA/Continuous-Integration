@@ -1,0 +1,9 @@
+kind: pipeline
+name: default
+
+steps:
+- name: test
+  image: gradle:jdk11.0.11
+  commands:
+  - ./gradlew assembleDebug --stacktrace
+  - ./gradlew testDebugUnitTest --stacktrace
