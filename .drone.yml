@@ -3,7 +3,7 @@ name: default
 
 steps:
 - name: test
-  image: gradle:jdk11.0.11
+  image: gradle:jdk11
   commands:
   - ./gradlew assembleDebug --stacktrace
   - ./gradlew testDebugUnitTest --stacktrace
